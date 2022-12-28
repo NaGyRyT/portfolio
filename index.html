@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono ">
     <title>NaGyRyT</title>
 </head>
 <body>
     <header id="home">
-        <div><img src="./img/logo.png" alt="Logo" width="100"></div>
+        <a class="header-logo" href="#home"><img src="./img/logo.png" alt="Logo"/></a>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Rólam</a></li>
-                <li><a href="#experience">Tapasztalat</a></li>
-                <li><a href="#work">Munka</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
+            <input type="checkbox" id="nav-checkbox" class="nav-checkbox"/>
+            <label for="nav-checkbox" class="nav-checkbox-button">
+                    <div class="nav-checkbox-line"></div>
+                    <div class="nav-checkbox-line"></div>
+                    <div class="nav-checkbox-line"></div>
+            </label>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#home">Home</a></li>
+                <li class="nav-list-item"><a href="#about">Rólam</a></li>
+                <li class="nav-list-item"><a href="#experience">Tapasztalat</a></li>
+                <li class="nav-list-item"><a href="#work">Munka</a></li>
+                <li class="nav-list-item"><a href="#contact">Kapcsolat</a></li>
+                <li class="nav-list-item"><a class="lang" href="index_en.html"> <img src="./img/English-Language-Flag-1-icon.png" alt="here can you switch to english"></a></li>
             </ul>
-            <div>
-                <ul>
-                    <li><a href="index_en.html">EN</a></li>
-                </ul>
-            </div>
         </nav>
     </header>
     <main>
@@ -85,17 +91,18 @@
                 <figcaption>Egy igazi webalkalmazás...</figcaption>
             </figure>
         </section>
-        <div id="contact">
-            <fieldset>
-                <legend><strong>Kapcsolat</strong></legend>
+        <div id="contact" class="contact">
+                <h2>Kapcsolat</h2>
                 <form action="https://formspree.io/f/mayklvrb" method="post">
-                    <p>Ha kapcsolatba szeretnél lépni velem, kérlek használd a lenti űrlapot vagy az oldalon lévő linkek valamelyikét (email, GitHub, LinkedIn). Amilyen gyorsan csak tudok válaszolok. Köszönöm, hogy időt szakítottál a portfólióm megnézésére.</p>
-                    <label>Név: <input type="text" name="name" placeholder="Név" required></label>
-                    <label>Email: <input type="email" name="email" placeholder="Email" required></label>
-                    <label>Üzenet: <textarea name="message" placeholder="Üzenet..." required></textarea></label>
-                    <input type="submit" name="submit" value="Küldés">
+                    <p >Ha kapcsolatba szeretnél lépni velem, kérlek használd a lenti űrlapot vagy az oldalon lévő linkek valamelyikét (email, GitHub, LinkedIn). Amilyen gyorsan csak tudok válaszolok. Köszönöm, hogy időt szakítottál a portfólióm megnézésére.</p>
+                    <div class="contact-items">
+                        <input type="text" class="contact-item" name="name" placeholder="Név" required>
+                        <input type="email" class="contact-item" name="email" placeholder="Email" required>
+                        <textarea name="message" class="contact-item" placeholder="Üzenet..." required></textarea>
+                        <input type="submit" class="contact-item" name="submit" value="Küldés">
+                    </div>
                 </form>
-            </fieldset>
+
         </div>
     </main>
     <footer>
