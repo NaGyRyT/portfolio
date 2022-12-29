@@ -35,7 +35,7 @@
             <section>
                 <h1>Üdvözöllek a portfólió oldalamon</h1>
             </section>
-            <section id="about" >
+            <section id="about" class="aboutme">
                 <h2>Rólam</h2>
                 <img src="./img/profil.png" alt="profilkép">
                 <p>Nagy Istvánnak hívnak, 
@@ -47,29 +47,34 @@
             </section>
             <section id="experience">        
                 <h2>Tapasztalat</h2>
-                <p>Néhány „dolog” amivel a munkám során találkozom:</p>
-                <ul>
-                    <li>Windows Server (AD, GPO, DNS, Fileserver, Webserver, FTP)</li>
-                    <li>Hyper-V, VMware</li>
-                    <li>CentOS (Postfix, Dovecot, Squirrelmail, Roundcube, Amavisd, SpamAssassin, Apache)</li>
-                    <li>Microsoft SQL, MySQL, phpMyAdmin</li>
-                    <li>Mikrotik (RouterOS, SwitchOS, Dude)</li>
-                    <li>VPN (L2TP/IPSEC, SSTP, Wireguard, OpenVPN)</li>
-                    <li>Synology</li>
-                    <li>Lotus Domino/Notes</li>
-                    <li>Joomla, Gantry5, Photoshop</li>
-                </ul> 
-                <p>És ami a jövőt illeti...</p> 
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Python</li>
-                    <li>Git, GitHub</li>
-                </ul>
-                
+                <div class="experiences">
+                <div class="web-developer">
+                    <h3>Webfejlesztő</h3> 
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Python</li>
+                        <li>Git, GitHub</li>
+                        <li>Joomla, Gantry5, Photoshop</li>
+                    </ul>
+                </div>
+                <div class="system-admin">
+                    <h3>Rendszergazda</h3>
+                    <ul>
+                        <li>Windows Server (AD, GPO, DNS, Fileserver, Webserver, FTP)</li>
+                        <li>Hyper-V, VMware</li>
+                        <li>CentOS (Postfix, Dovecot, Squirrelmail, Roundcube, Amavisd, SpamAssassin, Apache)</li>
+                        <li>Microsoft SQL, MySQL, phpMyAdmin</li>
+                        <li>Mikrotik (RouterOS, SwitchOS, Dude)</li>
+                        <li>VPN (L2TP/IPSEC, SSTP, Wireguard, OpenVPN)</li>
+                        <li>Synology (DSM)</li>
+                        <li>Lotus Domino/Notes</li>
+                    </ul> 
+                </div>
+                </div>
             </section>
-            <section id="work">
+            <section id="work" class="works">
                 <h2>Megvalósulandó projekt ötleteim</h2>
                 <figure>
                     <p>Karácsonyfa HTML + CSS</p>
@@ -92,27 +97,30 @@
                     <figcaption>Egy igazi webalkalmazás...</figcaption>
                 </figure>
             </section>
-            <div id="contact" class="contact">
+            <section id="contact" class="contact">
+                <div class="contact-text">
                     <h2>Kapcsolat</h2>
-                    <form action="https://formspree.io/f/mayklvrb" method="post">
-                        <p >Ha kapcsolatba szeretnél lépni velem, kérlek használd a lenti űrlapot vagy az oldalon lévő linkek valamelyikét (email, GitHub, LinkedIn). Amilyen gyorsan csak tudok válaszolok. Köszönöm, hogy időt szakítottál a portfólióm megnézésére.</p>
-                        <div class="contact-items">
-                            <input type="text" class="contact-item" name="name" placeholder="Név" required>
-                            <input type="email" class="contact-item" name="email" placeholder="Email" required>
-                            <textarea name="message" class="contact-item" placeholder="Üzenet..." required></textarea>
-                            <input type="submit" class="contact-item" name="submit" value="Küldés">
-                        </div>
+                    <p >Ha kapcsolatba szeretnél lépni velem, kérlek használd az űrlapot vagy az oldalon lévő linkek valamelyikét (email, GitHub, LinkedIn). Amilyen gyorsan csak tudok válaszolok. Köszönöm, hogy időt szakítottál a portfólióm megnézésére.</p>
+                </div>
+                <div class="contact-links">
+                    <ul class="contact-links-items">
+                        <li><a href="https://github.com/NaGyRyT" target="_blank"><img src="./img/iconmonstr-github-1.svg" alt="github profil"></a></li>
+                        <li><a href="#" target="_blank"><img src="./img/iconmonstr-linkedin-3.svg" alt="linkedin profil"></a></li>
+                        <li><a href="./resume/resume.pdf" target="_blank"><img src="./img/iconmonstr-cv-3.svg" alt="önéletrajz letöltése"></a></li>
+                        <li><a href="mailto:nagyryt@gmail.com"><img src="./img/iconmonstr-email-1.svg" alt="email küldése"></a></li>
+                    </ul>
+                </div>
+                <div class="contact-items">
+                    <form action="https://formspree.io/f/mayklvrb" method="post"></form>
+                        <input type="text" class="contact-item" name="name" placeholder="Név" required>
+                        <input type="email" class="contact-item" name="email" placeholder="Email" required>
+                        <textarea name="message" class="contact-item" placeholder="Üzenet..." required></textarea>
+                        <input type="submit" class="contact-item" name="submit" value="Küldés">
                     </form>
-
-            </div>
+                </div>                    
+            </section>
         </main>
         <footer>
-            <ul>
-                <li><a href="https://github.com/NaGyRyT" target="_blank"><img src="./img/iconmonstr-github-1.svg" alt="github"></a></li>
-                <li><a href="#" target="_blank"><img src="./img/iconmonstr-linkedin-3.svg" alt="linkedin"></a></li>
-                <li><a href="mailto:nagyryt@gmail.com"><img src="./img/iconmonstr-email-1.svg" alt="linkedin"></a></li>
-            </ul>
-            <a href="./resume/resume.pdf">Önéletrajz letöltése</a>
             <p>&copy; copyright 2022 NaGyRyT</p>
         </footer>
     </div>
