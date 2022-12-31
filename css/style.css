@@ -9,7 +9,6 @@
     --black: #000000;
     --white: #ffffff;
     --shadow: rgba(17, 17, 26, 0.3);
-    --hover: rgb(90 109 169);
     --dark-liver: #584B53;
     --rose-dust: #9D5C63;
     --periwinkle-crayola: #D6E3F8;
@@ -36,7 +35,7 @@ body{
 
 .large-conteners{
     margin: 2rem auto;
-    width: 85vw;
+    width: 95vw;
     box-shadow: 0px 5px 10px 0px var(--shadow);
 }
 
@@ -129,7 +128,7 @@ header{
 }
 
 .nav-list-item a:hover{
-    color:var(--hover);
+    color:var(--periwinkle-crayola);
 }
 
 .nav-checkbox:checked ~ .nav-checkbox-button .nav-checkbox-line:nth-of-type(1){
@@ -160,7 +159,7 @@ header{
     color: var(--white);
     padding: 1rem;
     font-size: 1.1rem;
-    line-height: 2.1rem;
+    line-height: 1.5rem;
 }
 
 .aboutme p{
@@ -233,7 +232,7 @@ header{
     text-align: center;
 }
 
-.work figcaption{
+.work p{
     padding: 1.0rem;
 }
 
@@ -296,6 +295,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+    line-height: 1.5rem;
 }
 
 .contact-text{
@@ -512,6 +512,10 @@ footer{
     .large-conteners{
         margin: 3.5rem auto;
         width: 90vw;
+    }
+
+    .nav-list-item{
+        font-size: 1.5rem;
     }
 
     .aboutme {
