@@ -47,10 +47,12 @@ header{
     background-color: var(--burlywood);
     box-shadow: 0px 5px 10px 0px var(--shadow);
 }
+
 .header-logo{
     display: flex;
     margin: 5px;
 }
+
 .header-logo img{
     min-width: 80px;
     max-width: 120px;
@@ -62,6 +64,7 @@ header{
     align-items: center;
 
 }
+
 .nav-checkbox{
     display: none;
 }
@@ -85,6 +88,7 @@ header{
     background-color: var(--black);
     transition: 0.3s; 
 }
+
 .nav-checkbox-line:nth-of-type(2){
     margin-right: 2px;
     width: 18px;
@@ -99,7 +103,7 @@ header{
     top:65px;
     width: 30vw;
     right: -200px;
-    min-width: 150px;
+    min-width: 170px;
     max-width: 200px;
     background: var(--burlywood);
     visibility: hidden;
@@ -112,7 +116,6 @@ header{
     justify-content: center;
     margin: 0 auto;
     font-size: 1.2rem;
-    
 }
 
 .nav-list-item a{
@@ -186,7 +189,7 @@ header{
 }
 .experiences li{
     list-style: square;
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 2rem;
 }
 
 .experiences{
@@ -273,7 +276,6 @@ header{
     filter: invert(88%) sepia(92%) saturate(5845%) hue-rotate(178deg) brightness(104%) contrast(95%);
 }
 
-
 .work-link-dark img{
     filter: invert(100%);
 }
@@ -301,7 +303,7 @@ header{
 }
 
 .contact-text p{
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 1.5rem;
 }
 
 .contact-links{
@@ -358,7 +360,8 @@ header{
 .contact-item-submit{
     cursor: pointer;
     background-color: var(--periwinkle-crayola);
-    border:none;
+    border: none;
+    border-radius: 0;
     width: 90%;
     color: var(--black);
     padding: 0.5rem;
@@ -400,10 +403,11 @@ footer{
     position: sticky;
     margin-left: -36px;
     width: 2rem;
-    top: 95vh;
+    top: 91vh;
     cursor: pointer;
     opacity: 0.5;
 }
+
 .back-to-top img:hover {
     opacity: 1;
 }
@@ -523,6 +527,7 @@ footer{
     .large-conteners{
         margin: 4rem auto;
     }
+
     .aboutme {
         padding: 3rem;
         font-size: 1.5rem;
@@ -533,8 +538,40 @@ footer{
         width:25%
     }
 
+    .back-to-top img {
+        margin-left: -50px;
+        width: 2.5rem;
+        top: 93vh;
+    }
+
 }
 
 @media (min-width: 1400px) {
+    .large-conteners{
+        width: 85vw;
+    }
 
+    .contact-item-submit{
+        width: 50%;
+    }
+
+    .contact-item{
+        width: 80%;
+    }
+
+    .back-to-top img {
+        margin-left: -80px;
+        width: 3rem;
+    }
+
+}
+
+@media (min-width: 1880px) {
+    .aboutme {
+        width:70%;
+    }
+
+    #about img {
+        margin: 0 auto;
+    }
 }
