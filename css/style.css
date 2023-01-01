@@ -100,7 +100,7 @@ header{
     font-weight: bold;
     flex-direction: column;
     position: absolute;
-    top:65px;
+    top:66px;
     width: 30vw;
     right: -200px;
     min-width: 170px;
@@ -108,7 +108,7 @@ header{
     background: var(--burlywood);
     visibility: hidden;
     transition: 0.4s, visibility 0.4s;
-    box-shadow: 0px 5px 10px 0px var(--shadow);
+    box-shadow: 0px 5px 5px 0px var(--shadow);
 }
 
 .nav-list-item{
@@ -269,7 +269,7 @@ header{
 }
 
 .work-link img{
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .work-link img:hover{
@@ -361,12 +361,15 @@ header{
     cursor: pointer;
     background-color: var(--periwinkle-crayola);
     border: none;
-    border-radius: 0;
     width: 90%;
     color: var(--black);
     padding: 0.5rem;
     font-size: 1rem;
     letter-spacing: 0.1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .contact-item-submit:hover{
@@ -519,6 +522,10 @@ footer{
         padding: 2.5rem;
         font-size: 1.3rem;
         line-height: 2.2rem;  
+    }
+
+    .work-link img{
+        width: 2rem;
     }
 
 }
