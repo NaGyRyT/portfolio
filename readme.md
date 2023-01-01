@@ -1,4 +1,4 @@
-# This is my Web Developer portfolio page
+# This is my portfolio page
 
 You can access it here: https://nagyryt.github.io/portfolio
 
