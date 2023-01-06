@@ -26,7 +26,7 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Cutive Mono";
     min-width: 320px;
 }
@@ -185,7 +185,7 @@ header{
 .aboutme-text {
     background-color: var(--rose-dust);
     color: var(--white);
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.1rem;
     line-height: 1.5rem;
     display: flex;
@@ -482,6 +482,10 @@ footer{
 
 /*-------------------------Responsible-------------------------*/
 @media (min-width: 768px) {
+    html{
+        font-size: 18px;
+    }
+
     .large-conteners{
             margin: 4rem auto;
     }
