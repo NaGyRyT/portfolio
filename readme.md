@@ -3,7 +3,9 @@
 You can access it here: https://nagyryt.github.io/portfolio
 
 I considered it a good challenge to made this page with clear HTML + CSS.
+
 I made the HTML + CSS validation.
+
 I paid attention to the web accessibility.
 
 Ver.: 0.2 2022.01.06.
@@ -17,6 +19,7 @@ Ver.: 0.2 2022.01.06.
 - i removed 3 mediaqueries (576, 1400, 1880)
 - i added labels to input fields in contact form
 - i added download resume link to about me section
+
 
 Ver.: 0.1 2022.12.31.
 - first release
