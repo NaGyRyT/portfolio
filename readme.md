@@ -19,6 +19,7 @@ Ver.: 0.2 2022.01.06.
 - i removed 3 mediaqueries (576, 1400, 1880)
 - i added labels to input fields in contact form
 - i added download resume link to about me section
+- i set default font-size: 16px
 
 
 Ver.: 0.1 2022.12.31.
