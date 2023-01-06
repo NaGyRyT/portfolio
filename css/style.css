@@ -11,9 +11,17 @@
     --shadow: rgba(17, 17, 26, 0.3);
     --dark-liver: #584B53;
     --rose-dust: #9D5C63;
-    --periwinkle-crayola: #D6E3F8;
     --seashell: #FEF5EF;
     --burlywood: #E4BB97;
+    --hover-text: rgba(0, 0, 0, 0.63);
+    --hover-svg-light: invert(100%) drop-shadow(0px 0px 10px rgb(255 255 255 / 0.5));
+    --hover-svg-dark: drop-shadow(0px 0px 10px rgb(0 0 0 / 0.3));
+}
+
+:focus{
+    outline-color: var(--dark-liver);
+    outline-offset: 4px; 
+    border-radius: 0;   
 }
 
 html{
@@ -33,14 +41,23 @@ body{
     overflow-x: hidden;
 }
 
+.main-footer-backtotop{
+    margin-top: 120px;
+}
+
 .large-conteners{
-    margin: 2rem auto;
-    width: 95vw;
+    margin: 3rem auto;
+    width: 85vw;
     box-shadow: 0px 5px 10px 0px var(--shadow);
+    scroll-margin-top: 65px;
 }
 
 /*-------------------------Header-------------------------*/
 header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +79,6 @@ header{
 .nav-list-item:last-of-type img{
     display: flex;
     align-items: center;
-
 }
 
 .nav-checkbox{
@@ -100,7 +116,9 @@ header{
     font-weight: bold;
     flex-direction: column;
     position: absolute;
-    top:66px;
+    height: 100vh;
+    z-index: 10;
+    top: 66px;
     width: 30vw;
     right: -200px;
     min-width: 170px;
@@ -119,10 +137,10 @@ header{
 }
 
 .nav-list-item a{
- color: var(--black);
- padding: 10px 0;
- margin: 1vh 0;
- text-decoration: none;
+    color: var(--black);
+    padding: 1rem 0;
+    margin: 1vh 0;
+    text-decoration: none;
 }
 
 .nav-checkbox:checked ~ .nav-list{
@@ -131,7 +149,7 @@ header{
 }
 
 .nav-list-item a:hover{
-    color:var(--periwinkle-crayola);
+    color: var(--hover-text);
 }
 
 .nav-checkbox:checked ~ .nav-checkbox-button .nav-checkbox-line:nth-of-type(1){
@@ -142,7 +160,7 @@ header{
 
 .nav-checkbox:checked ~ .nav-checkbox-button .nav-checkbox-line:nth-of-type(2){
     transition: transform 0.2s ease-in-out;
-    transform: scaleY(0);
+    transform: scaley(0);
 }
 
 .nav-checkbox:checked ~ .nav-checkbox-button .nav-checkbox-line:nth-of-type(3){
@@ -153,32 +171,63 @@ header{
 
 /*---------------------------About me--------------------------*/
 #about{
-    background-color: var(--periwinkle-crayola);
+    background-color: var(--burlywood);
     display: flex;
+    flex-direction: column;
 }
 
-.aboutme {
+#about h1{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.aboutme-text {
     background-color: var(--rose-dust);
     color: var(--white);
     padding: 1rem;
     font-size: 1.1rem;
     line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.aboutme p{
+.aboutme-text p{
     padding: 0.5rem;
 }
 
-#about img{
-    display: none;
-    align-self: flex-end;
-    padding: 1rem 1rem 0 1rem;
+.aboutme-text img{
+    filter: invert(100%);
+    width: 3rem;
 }
+
+.aboutme-text img:hover{
+    filter: var(--hover-svg-light);
+    border: 3px solid rgba(255,255,255,0 );
+}
+
+.aboutme-text a{
+    align-self: flex-end;
+}
+
+.profilepicture{
+    display: none;
+}
+
+.profilepicture-small{
+   display: flex;
+   justify-content: center;
+   padding-top: 1.5rem;
+}
+
+.aboutme-contener{
+        background-color: var(--dark-liver);
+    }
 
 /*-------------------------Experiences------------------------*/
 #experience{
-    background-color: var(--dark-liver);
-    color: var(--white);
+    background-color: var(--burlywood);
+    color: var(--black);
     line-height: 1.5rem;
     list-style: circle;
 }
@@ -187,6 +236,7 @@ header{
     text-align: center;
     padding: 1rem;
 }
+
 .experiences li{
     list-style: square;
     margin: 0.5rem 2rem;
@@ -199,8 +249,8 @@ header{
 }
 
 .web-developer{
-    background-color: var(--burlywood);
-    color: var(--black);
+    background-color: var(--dark-liver);
+    color: var(--white);
     padding: 0.5rem;
 }
 
@@ -212,7 +262,8 @@ header{
 
 /*-------------------------Works------------------------*/
 #work{
-    background-color: var(--periwinkle-crayola);
+    background-color: var(--burlywood);
+    color: var(--black);
 }
 
 #work h2{
@@ -223,6 +274,7 @@ header{
 .work { 
     display: flex;
     flex-direction: column;
+    color: var(--white);
 }
 
 .work img{
@@ -231,7 +283,7 @@ header{
 }
 
 .work h3{
-    padding: 0.5rem;
+    padding: 1.2rem 0 0.8rem 0;
     text-align: center;
 }
 
@@ -246,16 +298,15 @@ header{
 
 .work1, .work4{
     background-color: var(--dark-liver);
-    color: var(--white);
+
 }
 
 .work2{
-    background-color: var(--burlywood);
-}
+    order: 1;
+}   
 
-.work3{
+.work2, .work3{
     background-color: var(--rose-dust);
-    color: var(--white);
 }
 
 .work-links{
@@ -269,23 +320,25 @@ header{
 }
 
 .work-link img{
-    width: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    filter: invert(100%);
+
 }
 
 .work-link img:hover{
-    filter: invert(88%) sepia(92%) saturate(5845%) hue-rotate(178deg) brightness(104%) contrast(95%);
-}
-
-.work-link-dark img{
-    filter: invert(100%);
-}
-
-.work-link-dark img:hover{
-    filter: invert(83%) sepia(19%) saturate(707%) hue-rotate(335deg) brightness(93%) contrast(92%);
+    filter: var(--hover-svg-light);
+    border: 3px solid rgba(255,255,255,0 );
+    border-radius: 100%;
 }
 
 /*-------------------------Contact-------------------------*/
 #contact{
+    line-height: 1.5rem;
+    background-color: var(--dark-liver);
+}
+
+.contacts{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -293,38 +346,20 @@ header{
     line-height: 1.5rem;
 }
 
+#contact h2{
+    text-align: center;
+    padding: 1rem;
+    color: var(--black);
+    background-color: var(--burlywood);
+}
+
 .contact-text{
     background-color: var(--rose-dust);
     color:var(--white);
 }
 
-.contact-text h2{
-    padding: 1rem;
-}
-
 .contact-text p{
-    padding: 0 1rem 1rem 1.5rem;
-}
-
-.contact-links{
-    display: flex;
-    background-color: var(--periwinkle-crayola);
-    justify-content: center;
-}
-
-.contact-links-items {
-    padding: 1rem 0;
-    display: flex;
-    gap:3rem;
-}
-
-.contact-links-items img{
-    display: flex;
-    width: 1.5rem;
-}
-
-.contact-links-items img:hover{
-    filter: invert(83%) sepia(19%) saturate(707%) hue-rotate(335deg) brightness(93%) contrast(92%);
+    padding: 1rem 1rem 1rem 1.5rem;
 }
 
 .contact-items{
@@ -332,23 +367,28 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+}
+
+.contact-items label{
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 1rem 0rem 0.2rem 0rem;
 }
 
 .contact-item{
-    background: var(--burlywood);
+    background: var(--white);
     border: none;
     padding: 0.5rem;
     width: 90%;
-    color: var(--white);
+    color: var(--black);
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
 }
 
-.contact-item:focus{
-    background: var(--rose-dust);
-    outline: none;
+.contact-item, .contact-item-submit{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .contact-items textarea{
@@ -359,25 +399,25 @@ header{
 
 .contact-item-submit{
     cursor: pointer;
-    background-color: var(--periwinkle-crayola);
+    background-color: var(--white);
     border: none;
+    outline: 2px solid var(--white);
     width: 90%;
     color: var(--black);
     padding: 0.5rem;
+    margin: 1.5rem 0rem;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    border-radius: 0; 
 }
 
 .contact-item-submit:hover{
-    background-color: var(--seashell);
+    box-shadow: 0px 0px 15px var(--white);
+    outline: 2px solid rgba(255,255,255,0);
 }
 
 .contact-item::placeholder{
-    color: var(--white);
+    color:lightgray;
+    font-size: 0.8rem;
 }
 
 /*-------------------------Footer-------------------------*/
@@ -393,6 +433,31 @@ footer{
     right:0;
     height: 100%;
     max-width: 0px;
+}
+
+.contact-links{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links-items {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 320px;
+    width:50%;
+}
+
+.contact-links-items img{
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+}
+
+.contact-links-items img:hover{
+    filter: var(--hover-svg-dark); 
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
 .back-to-top:before {
@@ -416,30 +481,19 @@ footer{
 }
 
 /*-------------------------Responsible-------------------------*/
-@media (min-width: 576px) {
-    .works{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .work1, .work2, .work3, .work4{
-        width:50%
-    }
-
-}
-
 @media (min-width: 768px) {
     .large-conteners{
-            margin: 3rem auto;
+            margin: 4rem auto;
     }
 
     .nav-list{
         visibility: visible;
         right: 15vw;
         width: auto;
-        min-width:auto;
-        max-width:none;
+        height: auto;
+        min-width: auto;
+        max-width: none;
+        max-height: 100px;
         position: static;
         justify-content: space-evenly;
         flex-direction: row;
@@ -450,21 +504,33 @@ footer{
         padding:1vw;
     }
 
-    .nav-list-item a, img{
-        padding:2px 0;
-        margin: 0; 
-        text-decoration: none;
-        color: var(--black);
+    .nav-list-item a{
+        margin: 0;
     }
 
-    #about img{
-        display: block;
-        align-self: flex-end;
+    .profilepicture{
+        display: flex;
+        align-items: flex-end;
         padding: 1rem 1rem 0 1rem;
+        margin: 0 auto;
+    }
+
+    .profilepicture-small{
+        display: none;
     }
 
     .nav-checkbox-button{
         display: none;
+    }
+
+    .aboutme-contener{
+        display: flex;
+    }
+
+    .aboutme-text {
+        padding: 1rem;
+        font-size: 1.1rem;
+        line-height: 2.0rem;  
     }
 
     .experiences{
@@ -479,26 +545,31 @@ footer{
         width:50%;
     }
 
-    #contact{
+    .works{
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .work1, .work2, .work3, .work4{
+        width:50%
+    }
+
+    .work2{
+        order: 0;
+    }   
+
+    .contacts{
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     .contact-text{
-        width:45%;
-    }
-
-    .contact-links{
-        width: 10%;
-    }
-
-    .contact-links-items{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        width:50%;
     }
 
     .contact-form{
-        width:45%;
+        width:50%;
     }
 
     .back-to-top img {
@@ -509,80 +580,74 @@ footer{
 }
 
 @media (min-width: 992px) {
+    .main-footer-backtotop{
+        margin-top: 145px;
+    }
+    
     .large-conteners{
-        margin: 3.5rem auto;
-        width: 90vw;
+        margin: 5rem auto;
+        width: 80vw;
+        scroll-margin-top: 90px;
     }
 
     .nav-list-item{
         font-size: 1.5rem;
     }
 
-    .aboutme {
-        padding: 2.5rem;
-        font-size: 1.3rem;
-        line-height: 2.2rem;  
+    .aboutme-text {
+        padding: 2rem;
+        font-size: 1.2rem;
+        line-height: 2rem;  
     }
 
     .work-link img{
-        width: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .contact-links-items img{
-        width: 2rem;
+        height: 3rem;
+        width: 3rem;
     }
 
 }
 
 @media (min-width: 1200px) {
-    .large-conteners{
-        margin: 4rem auto;
+    .main-footer-backtotop{
+        margin-top: 180px;
     }
 
-    .aboutme {
-        padding: 3rem;
-        font-size: 1.5rem;
-        line-height: 3rem;  
+    .large-conteners{
+        margin: 5.5rem auto;
+        scroll-margin-top: 100px;
+    }
+
+    .aboutme-text {
+        padding: 2.5rem;
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        width: 70%;
     }
 
     .work1, .work2, .work3, .work4{
         width:25%
     }
 
-    .back-to-top img {
-        margin-left: -50px;
-        width: 2.5rem;
-        top: 93vh;
-    }
-
-}
-
-@media (min-width: 1400px) {
-    .large-conteners{
-        width: 85vw;
-    }
+    .work2{
+        order: 1;
+    }   
 
     .contact-item-submit{
         width: 50%;
     }
 
+    .back-to-top img {
+        margin-left: -85px;
+        width: 3rem;
+        top: 94vh;
+    }
+
     .contact-item{
         width: 80%;
-    }
-
-    .back-to-top img {
-        margin-left: -80px;
-        width: 3rem;
-    }
-
-}
-
-@media (min-width: 1880px) {
-    .aboutme {
-        width:70%;
-    }
-
-    #about img {
-        margin: 0 auto;
     }
 }
