@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -186,7 +186,7 @@ header{
     padding: 1rem;
 }
 
-.aboutme-text {
+.aboutme-text{
     background-color: var(--rose-dust);
     color: var(--white);
     padding: 0.5rem;
@@ -276,7 +276,7 @@ header{
     padding: 1rem;
 }
 
-.work { 
+.work{ 
     display: flex;
     flex-direction: column;
     color: var(--white);
@@ -377,7 +377,12 @@ header{
 .contact-items label{
     color: var(--white);
     font-size: 1.1rem;
-    padding: 1rem 0rem 0.2rem 0rem;
+    padding: 1rem 0rem 0.2rem 1rem;
+    align-self: flex-start;
+}
+
+.contact-items label:last-of-type{
+    font-size: 0.9rem;
 }
 
 .contact-item{
@@ -434,7 +439,11 @@ footer{
     padding: 1rem;
 }
 
-.back-to-top {
+footer p{
+    padding: 0.5rem;
+}
+
+.back-to-top{
     position: absolute;
     top: 0px;
     right:0;
@@ -447,7 +456,7 @@ footer{
     justify-content: center;
 }
 
-.contact-links-items {
+.contact-links-items{
     padding: 1rem 0;
     display: flex;
     justify-content: space-around;
@@ -468,14 +477,32 @@ footer{
     transform: scale(0.9);
 }
 
-.back-to-top:before {
+.privacy-policy-cookie{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.privacy-policy-cookie li a{
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.privacy-policy-cookie li a:hover{
+    color: var(--hover-text);
+    transform: scale(0.5);
+}
+
+.back-to-top:before{
     content: '';
     display: block;
     height: 100vh;
     pointer-events: none;
 }
   
-.back-to-top img {
+.back-to-top img{
     position: sticky;
     margin-left: -45px;
     width: 2.5rem;
@@ -485,13 +512,70 @@ footer{
     transition-duration: var(--links-transition-durtation);
 }
 
-.back-to-top img:hover {
-    /* filter: var(--hover-svg-dark); */
+.back-to-top img:hover{
+    filter: var(--hover-svg-dark);
     transform: scale(0.9);
 }
 
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+.popup{
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 90%;
+    max-height: 90%;
+    position: relative;
+    transition: all 2s ease-in-out;
+}
+  
+.popup h2{
+    padding: 1rem 1.3rem;
+    color: var(--black);
+}
+
+.popup .close{
+    position: absolute;
+    transition: all 0.2s;
+    top: 1px;
+    right: 6px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--black)
+}
+
+.popup .close:hover{
+    color: var(--hover-text);
+    transform: scale(0.9);
+}
+
+.popup .content{
+    text-align: left;
+    color: var(--black);
+    overflow: auto;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    line-height: 1.5rem;
+}
+
 /*-------------------------Responsible-------------------------*/
-@media (min-width: 768px) {
+@media (min-width: 768px){
     html{
         font-size: 18px;
     }
@@ -541,7 +625,7 @@ footer{
         display: flex;
     }
 
-    .aboutme-text {
+    .aboutme-text{
         padding: 1rem;
         font-size: 1.1rem;
         line-height: 2.0rem;  
@@ -589,7 +673,7 @@ footer{
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px){
     .main-footer-backtotop{
         margin-top: 145px;
     }
@@ -604,7 +688,7 @@ footer{
         font-size: 1.5rem;
     }
 
-    .aboutme-text {
+    .aboutme-text{
         padding: 2rem;
         font-size: 1.2rem;
         line-height: 2rem;  
@@ -624,14 +708,18 @@ footer{
         width: 3rem;
     }
 
-    .back-to-top img {
+    .back-to-top img{
         width: 3rem;
         margin-left: -70px;
     }
 
+    .popup .content{
+        padding: 0 1rem 1rem 1rem;
+    }
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
     .main-footer-backtotop{
         margin-top: 180px;
     }
@@ -641,7 +729,7 @@ footer{
         scroll-margin-top: 100px;
     }
 
-    .aboutme-text {
+    .aboutme-text{
         padding: 2.5rem;
         font-size: 1.3rem;
         line-height: 2.3rem;
