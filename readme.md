@@ -13,6 +13,8 @@ I considered it a good challenge to made this page with clear HTML + CSS.
 >  768px->18px 1200px->20px 1880->22px
 >- i set the titles of the links
 >- i added privacy and cookie policy link to the footer
+>- i set back the default container width to 90vw
+
 
 >Ver.: 0.2 2022.01.06.
 >- i set fixed header/menu

@@ -18,7 +18,7 @@
     --hover-svg-light: invert(100%) drop-shadow(0px 0px 10px rgb(255 255 255 / 0.5));
     --hover-svg-dark: drop-shadow(0px 0px 10px rgb(0 0 0 / 0.3));
     --links-transition-durtation: 0.15s;
-    --contener-shadow: 0px 0px 15px 0px var(--shadow);
+    --container-shadow: 0px 0px 15px 0px var(--shadow);
 }
 
 :focus{
@@ -48,10 +48,10 @@ body{
     margin-top: 120px;
 }
 
-.large-conteners{
+.large-containers{
     margin: 3rem auto;
-    width: 85vw;
-    box-shadow: var(--contener-shadow);
+    width: 90vw;
+    box-shadow: var(--container-shadow);
     scroll-margin-top: 65px;
 }
 
@@ -65,7 +65,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: var(--burlywood);
-    box-shadow: var(--contener-shadow);
+    box-shadow: var(--container-shadow);
 }
 
 .header-logo{
@@ -226,7 +226,7 @@ header{
    padding-top: 1.5rem;
 }
 
-.aboutme-contener{
+.aboutme-container{
         background-color: var(--dark-liver);
     }
 
@@ -440,7 +440,7 @@ footer{
     text-align: center;
     background-color: var(--burlywood);
     padding: 1rem 1rem 0.5rem 1rem;
-    box-shadow: var(--contener-shadow);
+    box-shadow: var(--container-shadow);
 }
 
 .back-to-top{
@@ -524,6 +524,11 @@ footer{
     transform: scale(0.9);
 }
 
+.copyright{
+    font-size: 0.8rem;
+}
+
+/*-------Policy------ */
 .overlay{
     display: flex;
     justify-content: center;
@@ -589,8 +594,9 @@ footer{
         font-size: 18px;
     }
 
-    .large-conteners{
+    .large-containers{
             margin: 4rem auto;
+            width: 85vw;
     }
 
     .nav-list{
@@ -630,7 +636,7 @@ footer{
         display: none;
     }
 
-    .aboutme-contener{
+    .aboutme-container{
         display: flex;
     }
 
@@ -687,7 +693,7 @@ footer{
         margin-top: 145px;
     }
     
-    .large-conteners{
+    .large-containers{
         margin: 5rem auto;
         width: 80vw;
         scroll-margin-top: 90px;
@@ -737,7 +743,7 @@ footer{
         margin-top: 180px;
     }
 
-    .large-conteners{
+    .large-containers{
         margin: 5.5rem auto;
         scroll-margin-top: 100px;
     }
